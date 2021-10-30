@@ -1,6 +1,8 @@
-
+// In the observer pattern, the source of data itself (the Subject) knows who all are its observers. 
+// So, there is no intermediate broker between Subject and Observers. Whereas in pub-sub, the publishers and
+//  subscribers are loosely coupled, they are unaware of even the existence of each other
 class PubSub {
-    constructor(){
+    constructor() {
         this.observers = {};
     }
     // add the observer to listener
@@ -52,3 +54,7 @@ pubSub.publish("event1", { name: "IV23" });
 // {name: "IV2"}
 
 
+// Observer                           |  PUb SUb
+// ----------------                     --------
+// synchronous                        |    async
+// subject knows its observers        |   subscriber and publisher dont know about each others existance
