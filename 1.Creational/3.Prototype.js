@@ -1,8 +1,10 @@
 // When methods are defined in the constructor itself
 // in this case , every object will have its own copy of the method
-function TeslaCar(model){
-    this.model = 'Tesla';
-    this.getCarModel = function(){return this.model};
+class TeslaCar {
+    constructor(model) {
+        this.model = model;
+        this.getCarModel = function () { return this.model; };
+    }
 }
 let t = new TeslaCar('ssada')
 let h = new TeslaCar('sasad');

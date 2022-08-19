@@ -1,4 +1,4 @@
-var Subject = function () {
+const Subject = function () {
     this.observers = [];
 
     return {
